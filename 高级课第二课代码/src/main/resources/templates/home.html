@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+    sadas
+
+$!{value1}
+
+    color: $!{color}
+    #foreach($c in $color)
+        THIS is color $!{foreach.index}:$c,$!{foreach.count}
+    #end
+
+
+    Map: $!{map}
+    #foreach($m in $map)
+        map $m
+    #end
+
+    <!--//Stu: $!{stuList}-->
+    #foreach($s in $stuList)
+        stu $s.name
+            $s.getDescription()
+            $s.sad
+    #end
+
+    #set($title = "hahaha")
+    Title:$!{title}
+
+    Parse set : #parse("header.html")
+
+    include    #include("header.html")
+
+    #macro(mhahaha,$map)
+        MMMAAAPPPPP   map
+    #end
+
+    mhahaha($map)
+
+
+    #set($hello = "hi")
+    $hello
+    #set($hi1 = "$!{hello} word")
+        $hi1
+    #set($hi2 = '$!{hi} word')
+
+    $hi2
+    </pre>
+</body>
+</html>
